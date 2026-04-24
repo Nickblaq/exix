@@ -6,7 +6,7 @@ cmds = [
   "npm install",
 ]
 
-[phases.install]
+[phases.postinstall]
 cmds = ["node node_modules/youtube-dl-exec/scripts/postinstall.js || node -e \"require('youtube-dl-exec').download()\"; node -e \"const fs = require('fs'); const p = 'node_modules/youtube-dl-exec/bin/yt-dlp'; if (fs.existsSync(p)) fs.chmodSync(p, 0o755)\""]
 
 [phases.build]
