@@ -4,7 +4,7 @@
     "lib": ["ES2022"],
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "declaration": true,
     "sourceMap": true,
     "strict": true,
