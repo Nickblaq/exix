@@ -1,0 +1,15 @@
+
+# railway.toml
+
+[build]
+  buildCommand = "npm run build"
+
+[deploy]
+  startCommand = "npm start"
+  healthcheckPath = "/health"       # Railway checks this to know if the app is running correctly
+  healthcheckTimeout = 300          # Give it 5 minutes, just to be safe for long downloads
+
+[service]
+  volumes = [
+    { path = "/app/downloads", name = "worker-downloads" }
+  ]
