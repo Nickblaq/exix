@@ -4,7 +4,7 @@
     "lib": ["ES2022"],
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./src",
     "declaration": true,
     "sourceMap": true,
     "strict": true,
@@ -16,11 +16,4 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "include": ["./**/*"],
-  "exclude": ["node_modules", "dist", "downloads"]
 }
