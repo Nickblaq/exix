@@ -6,10 +6,10 @@ cmds = [
   "npm install",
 ]
 
-[phases.build]
-cmds = ["node node_modules/yt-dlp-exec/scripts/postinstall.js || node -e \"require('yt-dlp-exec').download()\"; node -e \"const fs = require('fs'); const p = 'node_modules/yt-dlp-exec/bin/yt-dlp'; if (fs.existsSync(p)) fs.chmodSync(p, 0o755)\""]
+[phases.install]
+cmds = ["node node_modules/youtube-dl-exec/scripts/postinstall.js || node -e \"require('youtube-dl-exec').download()\"; node -e \"const fs = require('fs'); const p = 'node_modules/youtube-dl-exec/bin/yt-dlp'; if (fs.existsSync(p)) fs.chmodSync(p, 0o755)\""]
 
-[phases.postinstall]
+[phases.build]
 cmds = ["npm run build"]
 
 [start]
