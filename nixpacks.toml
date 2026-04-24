@@ -1,9 +1,11 @@
-
-# nixpacks.toml
-providers = ["node", "python"]
-
 [phases.setup]
-nixPkgs = ["nodejs_20", "python311"]
+nixPkgs = ["nodejs_18", "python3", "ffmpeg"]
+
+[phases.install]
+cmds = [
+  "npm install",
+  "pip install yt-dlp"
+]
 
 [phases.build]
 cmds = ["npm run build"]
